@@ -1,0 +1,18 @@
+WINDOWS QUICK START GUIDE
+=========================
+
+EASIEST METHOD: Double-click "install_and_run.bat"
+
+MANUAL METHOD:
+1. Install Python from python.org (check "Add to PATH")
+2. Open Command Prompt in this folder
+3. Run: pip install requests beautifulsoup4 pandas openpyxl lxml
+4. Run: python advanced_scraper.py
+
+TROUBLESHOOTING:
+- If "python not found": Reinstall Python and check "Add to PATH"
+- If pip errors: Try "python -m pip install" instead
+- If permission errors: Run Command Prompt as Administrator
+- If script closes: Run from Command Prompt, don't double-click
+
+Need help? Check the README.md or create an issue on GitHub!
