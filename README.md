@@ -1,13 +1,30 @@
-# 🌐 Universal Web Scraper Pro
+🌐 Universal Web Scraper Pro
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A powerful universal web scraper that works on ANY website. Features interactive menus, multiple export formats, and intelligent content extraction.
 
-## 🚀 Quick Start
 
-```bash
+Universal Web Scraper Pro is a powerful, flexible web scraping tool designed to work on any website.
+It offers an interactive menu, multiple scraping modes, and exports data in professional formats — no coding required.
+
+⚠️ Use responsibly. Respect website terms of service and robots.txt.
+
+✨ Key Features
+
+🌍 Universal Compatibility — Works on almost any website
+
+🎛️ Interactive Menu System — Beginner-friendly, no coding needed
+
+🕷️ Multiple Scraping Modes — Single page, full site crawl, batch URLs
+
+🧠 Smart Data Extraction — Text, images, links, emails & more
+
+📤 Multiple Export Formats — JSON, CSV, Excel
+
+🛡️ Respectful Scraping — Rate limiting & robots.txt compliance
+
+🔄 Advanced Error Handling — Automatic retries & recovery
+
+🚀 Quick Start
 # Clone the repository
 git clone https://github.com/Haider899/universal-web-scraper.git
 cd universal-web-scraper
@@ -17,190 +34,146 @@ pip install -r requirements.txt
 
 # Run the scraper
 python advanced_scraper.py
-```
 
-✨ Features
-✅ Universal Compatibility - Works on any website
+📦 Requirements
 
-✅ Interactive Menu System - No coding required
-
-✅ Multiple Scraping Modes - Single page, site crawling, batch URLs
-
-✅ Smart Data Extraction - Text, images, links, emails, and more
-
-✅ Multiple Export Formats - JSON, CSV, Excel
-
-✅ Respectful Scraping - Rate limiting, robots.txt compliance
-
-✅ Advanced Error Handling - Automatic retries and recovery
-=========
-🔧 Installation
-Prerequisites
-Python 3.8 or higher
+Python 3.8+
 
 pip (Python package manager)
 
-=========
+Required libraries (installed automatically):
 
-Step-by-Step Installation
-```bash
-# 1. Clone the repository
-git clone https://github.com/Haider899/universal-web-scraper.git
-cd universal-web-scraper
+requests — HTTP requests
 
-# 2. Install required packages
-pip install -r requirements.txt
+beautifulsoup4 — HTML parsing
 
-# 3. Verify installation
-python advanced_scraper.py --help
-```
-Requirements
-The following packages will be automatically installed:
+pandas — Data processing & export
 
-requests>=2.31.0 - HTTP requests
+openpyxl — Excel support
 
-beautifulsoup4>=4.12.2 - HTML parsing
+lxml — Fast HTML parsing
 
-pandas>=1.3.0 - Data manipulation and export
-
-openpyxl>=3.0.0 - Excel file support
-
-lxml>=4.6.0 - Fast HTML parsing
-================================
-# 🎯 Usage
-Interactive Mode (Recommended for Beginners)
-The easiest way to use the scraper is through the interactive menu:
-
-```bash
+🎯 Usage
+🔹 Interactive Mode (Recommended)
 python advanced_scraper.py
-```
-You'll see this menu:
 
-text
+
+You’ll see an interactive menu:
+
 🌐==================================================🌐
            UNIVERSAL WEB SCRAPER PRO
 🌐==================================================🌐
 
-📋 MAIN MENU - Choose an option:
-1. 🎯 Scrape Single Custom URL
+📋 MAIN MENU:
+1. 🎯 Scrape Single URL
 2. 🕷️  Crawl Entire Website
-3. 📝 Scrape Multiple Custom URLs
+3. 📝 Scrape Multiple URLs
 4. ⚙️  Settings & Configuration
-5. 🧪 Test on Popular Websites
+5. 🧪 Test Popular Websites
 6. 📊 View Previous Results
 7. ❌ Exit
 
-Enter your choice (1-7):
-=========
-Single URL Scraping
-Perfect for quick data extraction from one page:
+🔹 Single URL Scraping
 
-Choose option 1 from the main menu
+Choose Option 1
 
-Enter the target URL (e.g., https://example.com)
+Enter target URL (e.g. https://example.com)
 
-View real-time scraping progress
+Monitor real-time progress
 
-Choose export format (JSON, CSV, or Excel)
+Select export format (JSON / CSV / Excel)
 
-Results are saved automatically
-======
-Python API
-python
+Results saved automatically
+
+🧩 Python API Usage
 from universal_scraper import UniversalScraper
 
-# Initialize scraper
 scraper = UniversalScraper(base_delay=2)
 
-# Scrape single URL
 data = scraper.scrape_url("https://example.com")
 
-# Export results
-scraper.export_data({'result': data}, 'my_report', ['json', 'csv'])
+scraper.export_data(
+    {'result': data},
+    filename='my_report',
+    formats=['json', 'csv']
+)
 
+🪟 Windows Installation
+🚀 Easy Method (Recommended)
 
-# 🪟 Windows Installation
-🚀 Easy Method (Recommended for Beginners)
-Download this repository as ZIP (Code → Download ZIP)
+Download ZIP (Code → Download ZIP)
 
-Extract to your Desktop
+Extract to Desktop
 
 Double-click install_and_run.bat
 
-Follow the prompts - it will automatically install everything!
+Follow on-screen instructions
 
-### 🔧 Manual Method
-```cmd
-# 1. Open Command Prompt in the project folder
+🔧 Manual Method
 cd Desktop\universal-web-scraper
-
-# 2. Install dependencies
-pip install requests beautifulsoup4 pandas openpyxl lxml
-
-# 3. Run the scraper
+pip install -r requirements.txt
 python advanced_scraper.py
-```
-# 🐧 Linux/macOS Installation
-```bash
-# Install Python and pip (if not already installed)
-sudo apt update  # Ubuntu/Debian
+
+🐧 Linux / macOS Installation
+# Ubuntu / Debian
+sudo apt update
 sudo apt install python3 python3-pip
 
-# Or on macOS
+# macOS
 brew install python
 
-# Install dependencies
 pip3 install -r requirements.txt
-
-# Run the scraper
 python3 advanced_scraper.py
-```
-======
+
 💡 Examples
-Example 1: Quick Data Extraction
-```bash
+Batch Scraping Example
 from universal_scraper import UniversalScraper
 
 urls = ["https://site1.com", "https://site2.com"]
 scraper = UniversalScraper()
-results = {}
 
-for url in urls:
-    results[url] = scraper.scrape_url(url)
+results = {url: scraper.scrape_url(url) for url in urls}
 
 scraper.export_data(results, 'batch_results', ['excel'])
-```
+
 ❓ Troubleshooting
 Python Not Found
-Windows: Reinstall Python and check "Add Python to PATH"
+
+Windows: Reinstall Python and check Add Python to PATH
+
 Linux: sudo apt install python3
-macOS: brew install python or download from python.org
-======
-Module Not Found Errors
-```bash
+
+macOS: brew install python
+
+Module Not Found
 pip install requests beautifulsoup4 pandas openpyxl lxml
-```
-# 🤝 Contributing
-Fork the project
 
-Create your feature branch (git checkout -b feature/AmazingFeature)
+🤝 Contributing
 
-Commit your changes (git commit -m 'Add some AmazingFeature')
+Contributions are welcome!
 
-Push to the branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-# 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-# 🙏 Acknowledgments
-Built with BeautifulSoup4 for HTML parsing
-
-Uses Requests for HTTP operations
-
-Pandas for data export and manipulation
-
-# ⭐ Star this repo if you find it useful!
+git checkout -b feature/AmazingFeature
+git commit -m "Add AmazingFeature"
+git push origin feature/AmazingFeature
 
 
+Open a Pull Request 🚀
+
+📄 License
+
+This project is licensed under the MIT License.
+See the LICENSE
+ file for details.
+
+🙏 Acknowledgments
+
+BeautifulSoup4 — HTML parsing
+
+Requests — HTTP operations
+
+Pandas — Data processing & export
+
+⭐ Support the Project
+
+If you find this tool useful, please star the repository ⭐
+It helps the project grow and motivates further development.
