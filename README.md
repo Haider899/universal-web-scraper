@@ -1,6 +1,4 @@
-🌐 Universal Web Scraper Pro
-
-
+# 🌐 Universal Web Scraper Pro
 
 
 Universal Web Scraper Pro is a powerful, flexible web scraping tool designed to work on any website.
@@ -8,7 +6,7 @@ It offers an interactive menu, multiple scraping modes, and exports data in prof
 
 ⚠️ Use responsibly. Respect website terms of service and robots.txt.
 
-✨ Key Features
+# ✨ Key Features
 
 🌍 Universal Compatibility — Works on almost any website
 
@@ -24,8 +22,9 @@ It offers an interactive menu, multiple scraping modes, and exports data in prof
 
 🔄 Advanced Error Handling — Automatic retries & recovery
 
-🚀 Quick Start
+# 🚀 Quick Start
 # Clone the repository
+```
 git clone https://github.com/Haider899/universal-web-scraper.git
 cd universal-web-scraper
 
@@ -34,8 +33,9 @@ pip install -r requirements.txt
 
 # Run the scraper
 python advanced_scraper.py
+```
 
-📦 Requirements
+# 📦 Requirements
 
 Python 3.8+
 
@@ -53,10 +53,11 @@ openpyxl — Excel support
 
 lxml — Fast HTML parsing
 
-🎯 Usage
+# 🎯 Usage
 🔹 Interactive Mode (Recommended)
+```
 python advanced_scraper.py
-
+```
 
 You’ll see an interactive menu:
 
@@ -98,7 +99,7 @@ scraper.export_data(
     formats=['json', 'csv']
 )
 
-🪟 Windows Installation
+# 🪟 Windows Installation
 🚀 Easy Method (Recommended)
 
 Download ZIP (Code → Download ZIP)
@@ -109,23 +110,26 @@ Double-click install_and_run.bat
 
 Follow on-screen instructions
 
-🔧 Manual Method
+# 🔧 Manual Method
+```
 cd Desktop\universal-web-scraper
 pip install -r requirements.txt
 python advanced_scraper.py
+```
 
-🐧 Linux / macOS Installation
+# 🐧 Linux / macOS Installation
 # Ubuntu / Debian
+```
 sudo apt update
 sudo apt install python3 python3-pip
-
+```
 # macOS
+```
 brew install python
-
 pip3 install -r requirements.txt
 python3 advanced_scraper.py
-
-💡 Examples
+```
+# 💡 Examples
 Batch Scraping Example
 from universal_scraper import UniversalScraper
 
@@ -136,7 +140,7 @@ results = {url: scraper.scrape_url(url) for url in urls}
 
 scraper.export_data(results, 'batch_results', ['excel'])
 
-❓ Troubleshooting
+# ❓ Troubleshooting
 Python Not Found
 
 Windows: Reinstall Python and check Add Python to PATH
@@ -148,7 +152,7 @@ macOS: brew install python
 Module Not Found
 pip install requests beautifulsoup4 pandas openpyxl lxml
 
-🤝 Contributing
+# 🤝 Contributing
 
 Contributions are welcome!
 
