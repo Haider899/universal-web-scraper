@@ -7,12 +7,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="universal-web-scraper",
     version="1.0.0",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Haider Usama",
+    author_email="haider899@example.com",
     description="A powerful universal web scraper for any website",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/universal-web-scraper",
+    url="https://github.com/Haider899/universal-web-scraper",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
