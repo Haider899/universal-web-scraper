@@ -1,183 +1,139 @@
-# 🌐 Universal Web Scraper Pro
+# 🌐 Universal Web Scraper Pro: Scrape ANY Website with Ease
 
+![Universal Scraper Banner](https://raw.githubusercontent.com/Haider899/universal-web-scraper/main/screenshots/banner.png) <!-- Placeholder for an attractive banner image -->
 
-Universal Web Scraper Pro is a powerful, flexible web scraping tool designed to work on any website.
-It offers an interactive menu, multiple scraping modes, and exports data in professional formats — no coding required.
+## ✨ Overview
 
-⚠️ Use responsibly. Respect website terms of service and robots.txt.
+**Universal Web Scraper Pro** is a powerful, flexible, and highly automated web scraping tool designed to work on virtually any website. It features an intuitive interactive menu system, multiple scraping modes, and professional data export options—all without requiring a single line of code from the user. Whether you need to scrape a single page, crawl an entire site, or process a batch of URLs, this tool provides a robust and reliable solution for all your data extraction needs.
 
-# ✨ Key Features
+> ⚠️ **Disclaimer**: Please use this tool responsibly. Always respect the website's Terms of Service and `robots.txt` guidelines.
 
-🌍 Universal Compatibility — Works on almost any website
+## 🚀 Key Features
 
-🎛️ Interactive Menu System — Beginner-friendly, no coding needed
+Universal Web Scraper Pro is packed with advanced features to ensure efficient and ethical data collection:
 
-🕷️ Multiple Scraping Modes — Single page, full site crawl, batch URLs
+*   **🌍 Universal Compatibility**: Engineered to work seamlessly across a vast range of websites, from simple blogs to complex corporate portals.
+*   **🎛️ Interactive Menu System**: A beginner-friendly command-line interface that guides you through the scraping process step-by-step.
+*   **🕷️ Multiple Scraping Modes**: Choose between Single Page Scrape, Full Website Crawl, or Batch URL Processing to suit your specific project requirements.
+*   **🧠 Smart Data Extraction**: Automatically identifies and extracts key information, including text, images, links, emails, phone numbers, and structured data.
+*   **📤 Professional Export Formats**: Save your collected data in industry-standard formats like **JSON, CSV, and Excel (XLSX)** for easy analysis.
+*   **🛡️ Respectful & Robust**: Built-in rate limiting, `robots.txt` compliance, and an advanced retry mechanism ensure stable operation while being a good web citizen.
+*   **🔄 Advanced Error Handling**: Automatically handles common web errors and connection issues, ensuring your scraping tasks complete successfully.
 
-🧠 Smart Data Extraction — Text, images, links, emails & more
+## ⚙️ Installation
 
-📤 Multiple Export Formats — JSON, CSV, Excel
+Getting started with Universal Web Scraper Pro is straightforward:
 
-🛡️ Respectful Scraping — Rate limiting & robots.txt compliance
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/Haider899/universal-web-scraper.git
+    cd universal-web-scraper
+    ```
 
-🔄 Advanced Error Handling — Automatic retries & recovery
+2.  **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-# 🚀 Quick Start
-# Clone the repository
-```
-git clone https://github.com/Haider899/universal-web-scraper.git
-cd universal-web-scraper
+## 💡 Usage
 
-# Install dependencies
-pip install -r requirements.txt
+### 🔹 Interactive Mode (Recommended)
 
-# Run the scraper
+Simply run the advanced scraper to access the interactive menu:
+
+```bash
 python advanced_scraper.py
 ```
 
-# 📦 Requirements
+You will be presented with a professional menu to guide your scraping tasks:
 
-Python 3.8+
-
-pip (Python package manager)
-
-Required libraries (installed automatically):
-
-requests — HTTP requests
-
-beautifulsoup4 — HTML parsing
-
-pandas — Data processing & export
-
-openpyxl — Excel support
-
-lxml — Fast HTML parsing
-
-# 🎯 Usage
-🔹 Interactive Mode (Recommended)
-```
-python advanced_scraper.py
-```
-
-You’ll see an interactive menu:
-
+```text
 🌐==================================================🌐
            UNIVERSAL WEB SCRAPER PRO
 🌐==================================================🌐
 
 📋 MAIN MENU:
 1. 🎯 Scrape Single URL
-2. 🕷️  Crawl Entire Website
+2. 🕷️ Crawl Entire Website
 3. 📝 Scrape Multiple URLs
-4. ⚙️  Settings & Configuration
+4. ⚙️ Settings & Configuration
 5. 🧪 Test Popular Websites
 6. 📊 View Previous Results
 7. ❌ Exit
+```
 
-🔹 Single URL Scraping
+### 🧩 Python API Usage
 
-Choose Option 1
+For developers, you can integrate the scraper directly into your Python projects:
 
-Enter target URL (e.g. https://example.com)
-
-Monitor real-time progress
-
-Select export format (JSON / CSV / Excel)
-
-Results saved automatically
-
-🧩 Python API Usage
+```python
 from universal_scraper import UniversalScraper
 
+# Initialize the scraper
 scraper = UniversalScraper(base_delay=2)
 
+# Scrape a single URL
 data = scraper.scrape_url("https://example.com")
 
-scraper.export_data(
-    {'result': data},
-    filename='my_report',
-    formats=['json', 'csv']
-)
-
-# 🪟 Windows Installation
-🚀 Easy Method (Recommended)
-
-Download ZIP (Code → Download ZIP)
-
-Extract to Desktop
-
-Double-click install_and_run.bat
-
-Follow on-screen instructions
-
-# 🔧 Manual Method
-```
-cd Desktop\universal-web-scraper
-pip install -r requirements.txt
-python advanced_scraper.py
+# Export the data
+scraper.export_data({'result': data}, filename='my_report', formats=['json', 'csv'])
 ```
 
-# 🐧 Linux / macOS Installation
-# Ubuntu / Debian
-```
-sudo apt update
-sudo apt install python3 python3-pip
-```
-# macOS
-```
-brew install python
-pip3 install -r requirements.txt
-python3 advanced_scraper.py
-```
-# 💡 Examples
-Batch Scraping Example
-from universal_scraper import UniversalScraper
+## 🤝 Contributing
 
-urls = ["https://site1.com", "https://site2.com"]
-scraper = UniversalScraper()
+We welcome contributions from the community! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get involved.
 
-results = {url: scraper.scrape_url(url) for url in urls}
+## 📜 Code of Conduct
 
-scraper.export_data(results, 'batch_results', ['excel'])
+To foster a welcoming and inclusive environment, we adhere to a [Code of Conduct](CODE_OF_CONDUCT.md). Please review it before participating.
 
-# ❓ Troubleshooting
-Python Not Found
+## ⚖️ License
 
-Windows: Reinstall Python and check Add Python to PATH
+This project is licensed under the [MIT License](LICENSE).
 
-Linux: sudo apt install python3
+---
 
-macOS: brew install python
+<p align="center">
+  <a href="https://github.com/Haider899/universal-web-scraper/stargazers">
+    <img src="https://img.shields.io/github/stars/Haider899/universal-web-scraper?style=social" alt="GitHub stars">
+  </a>
+  <a href="https://github.com/Haider899/universal-web-scraper/forks">
+    <img src="https://img.shields.io/github/forks/Haider899/universal-web-scraper?style=social" alt="GitHub forks">
+  </a>
+</p>
 
-Module Not Found
-pip install requests beautifulsoup4 pandas openpyxl lxml
+### ⭐ Support the Project
 
-# 🤝 Contributing
+If Universal Web Scraper Pro has helped you, please consider giving it a star on GitHub! Your support motivates further development.
 
-Contributions are welcome!
+### 🛠️ Built With
 
-git checkout -b feature/AmazingFeature
-git commit -m "Add AmazingFeature"
-git push origin feature/AmazingFeature
+<p align="center">
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  </a>
+  <a href="https://github.com/">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <img src="https://img.shields.io/badge/Open%20Source-30A3DC?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="Open Source">
+</p>
 
+### 📊 Repository Stats
 
-Open a Pull Request 🚀
+<p align="center">
+  <img src="https://img.shields.io/github/last-commit/Haider899/universal-web-scraper?style=for-the-badge" alt="Last Commit">
+  <img src="https://img.shields.io/github/repo-size/Haider899/universal-web-scraper?style=for-the-badge" alt="Repo Size">
+  <img src="https://img.shields.io/github/issues/Haider899/universal-web-scraper?style=for-the-badge" alt="Open Issues">
+</p>
 
-📄 License
+### 🔗 Connect
 
-This project is licensed under the MIT License.
-See the LICENSE
- file for details.
+<p align="center">
+  <a href="https://github.com/Haider899">
+    <img src="https://img.shields.io/github/followers/Haider899?style=social" alt="GitHub Followers">
+  </a>
+</p>
 
-🙏 Acknowledgments
+### ❤️ Made with Love
 
-BeautifulSoup4 — HTML parsing
-
-Requests — HTTP operations
-
-Pandas — Data processing & export
-
-⭐ Support the Project
-
-If you find this tool useful, please star the repository ⭐
-It helps the project grow and motivates further development.
+This project was created with ❤️ for the developer and security community. Support open-source tools!
